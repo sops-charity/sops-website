@@ -1,0 +1,230 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #000000;
+}
+
+/* Header Styling with Background Image */
+header {
+    background: url('images/3.jpg') no-repeat center center; /* Add your image path */
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay Effect for Light Background */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Slight white overlay for synchronization */
+    z-index: 1;
+    backdrop-filter: blur(0px); /* Adjust blur for a softer effect */
+}
+
+/* Ensure content is on top of the overlay */
+.logo-container, nav {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo and Brand Title Container */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    width: 150px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adjust to match header overlay */
+    padding: 10px;
+    border-radius: 10px; /* Makes the logo container look smoother */
+}
+
+/* Brand Title Styling */
+.brand-title {
+    font-size: 2.5rem;
+    color: #07f1f1;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navigation Menu Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #f4cd0c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px;
+    background-color: #000000;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #0f83d6;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #aca4a4;
+}
+
+/* Mission Section */
+.mission {
+    padding: 30px;
+    background-color: #000000;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 2rem;
+    color: #0f83d6;
+}
+
+.mission p {
+    font-size: 1.1rem;
+    color: #aca4a4;
+}
+
+/* Projects Section */
+.projects {
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.projects p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Team Section Styling */
+.team {
+    padding: 50px;
+    background-color: #000000;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    color: #10dc35;
+    margin-bottom: 50px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ensures profiles are responsive on smaller screens */
+}
+
+.team-member {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Adds a hover effect to elevate the card */
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #07f1f1;
+}
+
+.team-member .title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e7d10bc1;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 0.95rem;
+    color: #969f9f;
+}
+
+.team-member .social-links {
+    margin-top: 15px;
+}
+
+.team-member .social-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 5px;
+}
+
+.team-member .social-links a:hover {
+    text-decoration: underline;
+}
